@@ -3,5 +3,6 @@ using namespace std;
 
 int main() {
   const int *ptr;
-  *ptr = 10; // error
+  // *ptr = 10; // error
+  return 0;
 }
