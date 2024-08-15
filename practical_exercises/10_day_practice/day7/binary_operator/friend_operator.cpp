@@ -11,7 +11,7 @@
 最好用非成员形式（包括友元和普通函数）的重载运算符函数实现。
 */
 
-//解决前面的2+b问题。
+// 解决前面的2+b问题。
 #include <iostream>
 
 class Complex {
@@ -19,7 +19,7 @@ private:
   double r, i;
 
 public:
-  Complex(double R = 0, double I = 0) : r(R), i(I){};
+  Complex(double R = 0, double I = 0) : r(R), i(I) {};
   friend Complex operator+(Complex a, Complex b);
   friend Complex operator-(Complex a, Complex b);
   friend Complex operator*(Complex a, Complex b);
@@ -80,6 +80,6 @@ int main(void) {
   c4.display();
   c5.display();
   c6.display();
-  
+
   return 0;
 }

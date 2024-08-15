@@ -1,5 +1,5 @@
 /* 1.类运算符重载.cpp */
-//有复数类Complex，利用运算符重载实现复数的加、减、乘、除等复数运算。
+// 有复数类Complex，利用运算符重载实现复数的加、减、乘、除等复数运算。
 #include <iostream>
 using namespace std;
 class Complex {
@@ -7,7 +7,7 @@ private:
   double r, i;
 
 public:
-  Complex(double R = 0, double I = 0) : r(R), i(I){};
+  Complex(double R = 0, double I = 0) : r(R), i(I) {};
   Complex operator+(Complex b);
   Complex operator-(Complex b);
   Complex operator*(Complex b);
@@ -17,14 +17,14 @@ public:
 
 Complex Complex::operator+(Complex b) { return Complex(r + b.r, i + b.i); }
 Complex Complex::operator-(Complex b) { return Complex(r - b.r, i - b.i); }
-//求复数相乘的算法
+// 求复数相乘的算法
 Complex Complex::operator*(Complex b) {
   Complex t;
   t.r = r * b.r - i * b.i;
   t.i = r * b.i + i * b.r;
   return t;
 }
-//求复数相除的算法
+// 求复数相除的算法
 Complex Complex::operator/(Complex b) {
   Complex t;
   double x;
@@ -45,7 +45,7 @@ void Complex::display() {
 int main(void) {
   Complex c1(1, 2), c2(3, 4), c3, c4, c5, c6;
   Complex a, b(2, 3);
-  a = b + 2; //正确
+  a = b + 2; // 正确
   // a=2+b;       			//错误
   a.display();
   c3 = c1 + c2;
@@ -58,6 +58,6 @@ int main(void) {
   c4.display();
   c5.display();
   c6.display();
-  
+
   return 0;
 }

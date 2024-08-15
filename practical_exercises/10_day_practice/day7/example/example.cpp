@@ -1,35 +1,35 @@
-//设计一个字符串类String，通过运算符重载实现字符串的输入、输出以及+=、==、!=、<、>、>=、[
+// 设计一个字符串类String，通过运算符重载实现字符串的输入、输出以及+=、==、!=、<、>、>=、[
 //]等运算。
 #include <cstring>
 #include <iostream>
 using namespace std;
 class String {
 private:
-  int length; //字符串长度
-  char *sPtr; //存放字符串的指针
+  int length; // 字符串长度
+  char *sPtr; // 存放字符串的指针
   void setString(const char *s2);
   friend ostream &operator<<(ostream &os, const String &s) {
     return os << s.sPtr;
   };
   friend istream &operator>>(istream &is, String &s) {
     return is >> s.sPtr;
-  }; //重载输入运算符
+  }; // 重载输入运算符
 public:
   String(const char * = "");
   const String &operator=(const String &R) {
     length = R.length;
     strcpy(sPtr, R.sPtr);
     return *this;
-  };                                         //重载赋值运算符 =
-  const String &operator+=(const String &R); //字符串的连接 +=
-  bool operator==(const String &R);          //字符串的相等比较 ==
-  bool operator!=(const String &R);          //字符串的不等比较 !=
-  bool operator!();                          //判定字符串是否为空
-  bool operator<(const String &R) const;     //字符串的小于比较 <
-  bool operator>(const String &R);           //字符串的大于比较 >
-  bool operator>=(const String &R);          //字符串的大于等于比较
-  char &operator[](int);                     //字符串的下标运算
-  ~String(){};
+  }; // 重载赋值运算符 =
+  const String &operator+=(const String &R); // 字符串的连接 +=
+  bool operator==(const String &R);          // 字符串的相等比较 ==
+  bool operator!=(const String &R);          // 字符串的不等比较 !=
+  bool operator!();                          // 判定字符串是否为空
+  bool operator<(const String &R) const;     // 字符串的小于比较 <
+  bool operator>(const String &R);           // 字符串的大于比较 >
+  bool operator>=(const String &R);          // 字符串的大于等于比较
+  char &operator[](int);                     // 字符串的下标运算
+  ~String() {};
 };
 const String &String::operator+=(const String &R) {
   char *temp = sPtr;
@@ -81,6 +81,6 @@ int main() {
   s1[6] = 'N';
   s1[10] = 'Y';
   cout << "s1 = " << s1 << "\n"; // L10
-  
+
   return 0;
 }

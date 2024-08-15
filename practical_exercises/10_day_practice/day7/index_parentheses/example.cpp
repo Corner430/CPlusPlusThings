@@ -27,5 +27,4 @@ int main(void) {
   int b = obj["abcd"];
   cout << "a=" << a << endl;
   cout << "b=" << b << endl;
-  
 }

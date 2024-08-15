@@ -1,5 +1,5 @@
 /* 秒钟自增运算.cpp */
-//设计一个时间类Time，它能够完成秒钟的自增运算。
+// 设计一个时间类Time，它能够完成秒钟的自增运算。
 
 #include <iostream>
 using namespace std;
@@ -11,7 +11,7 @@ private:
 public:
   Time(int h, int m, int s);
   Time operator++();
-  //友元重载需要参数
+  // 友元重载需要参数
   friend Time operator--(Time &t);
   void display();
 };
@@ -60,9 +60,9 @@ void Time::display() { cout << hour << ":" << minute << ":" << second << endl; }
 int main(int argc, char const *argv[]) {
   Time t1(23, 59, 59);
   t1.display();
-  ++t1; //隐式调用
+  ++t1; // 隐式调用
   t1.display();
-  t1.operator++(); //显式调用
+  t1.operator++(); // 显式调用
   t1.display();
   Time t2(24, 60, 60);
   t2.display();
@@ -70,6 +70,6 @@ int main(int argc, char const *argv[]) {
   t2.display();
   --t2;
   t2.display();
-  
+
   return 0;
 }

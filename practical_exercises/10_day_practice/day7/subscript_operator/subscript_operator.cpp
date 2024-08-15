@@ -3,27 +3,27 @@
 #include <cstring>
 #include <iostream>
 using namespace std;
-struct Person { //职工基本信息的结构
+struct Person { // 职工基本信息的结构
   double salary;
   char *name;
 };
 class SalaryManaege {
-  Person *employ; //存放职工信息的数组
-  int max;        //数组下标上界
-  int n;          //数组中的实际职工人数
+  Person *employ; // 存放职工信息的数组
+  int max;        // 数组下标上界
+  int n;          // 数组中的实际职工人数
 public:
   SalaryManaege(int Max = 0) {
     max = Max;
     n = 0;
     employ = new Person[max];
   }
-  double &operator[](char *Name) { //重载[]，返回引用
+  double &operator[](char *Name) { // 重载[]，返回引用
     Person *p;
     for (p = employ; p < employ + n; p++)
-      //如果存在处理
+      // 如果存在处理
       if (strcmp(p->name, Name) == 0)
         return p->salary;
-    //不存在情况处理
+    // 不存在情况处理
     p = employ + n++;
     p->name = new char[strlen(Name) + 1];
     strcpy(p->name, Name);
@@ -47,5 +47,4 @@ int main() {
 
   cout << "-------下为display的输出--------\n\n";
   s.display();
-  
 }
