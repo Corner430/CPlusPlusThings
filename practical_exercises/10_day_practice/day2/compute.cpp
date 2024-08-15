@@ -7,7 +7,7 @@ int main(int argc, char const *argv[]) {
   double b = 4.0 * arctan(1.0 / 239.0);
   double pi = a - b;
   cout << pi << endl;
-  
+
   return 0;
 }
 double arctan(double x) {

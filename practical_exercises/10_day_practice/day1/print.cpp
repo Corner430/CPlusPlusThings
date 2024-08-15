@@ -19,6 +19,6 @@ int main(int argc, char const *argv[]) {
       cout << '*';
     cout << endl;
   }
-  
+
   return 0;
 }

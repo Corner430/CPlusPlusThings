@@ -12,6 +12,6 @@ int main(int argc, char const *argv[]) {
     cout << wek + s << endl;
     cout << "-------哈哈-------" << endl;
   }
-  
+
   return 0;
 }

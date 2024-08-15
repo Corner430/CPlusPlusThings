@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]) {
   cin >> n;
   cin >> k;
   cout << f(n, k) << endl;
-  
+
   return 0;
 }
 

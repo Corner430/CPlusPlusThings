@@ -40,8 +40,7 @@ int main(int argc, char const *argv[]) {
     cout << "player loses\n";
   }
 
-  
-  return 0;
+    return 0;
 }
 
 int rolldice() {

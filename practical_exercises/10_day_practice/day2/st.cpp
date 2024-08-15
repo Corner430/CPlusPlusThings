@@ -14,6 +14,6 @@ int main(int argc, char const *argv[]) {
   cout << sizeof(s.name) << endl;
   cout << sizeof(s.gender) << endl;
   cout << sizeof(s) << endl;
-  
+
   return 0;
 }

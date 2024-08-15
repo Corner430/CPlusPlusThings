@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]) {
   int disks;
   cin >> disks;
   hanoi(disks, 'A', 'B', 'C');
-  
+
   return 0;
 }
 
